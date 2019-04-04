@@ -1,3 +1,10 @@
+---
+layout: post
+title: "JavaScript的几种调用方式"
+tags: [JavaScript]
+comments: true
+---
+
 [^1]: <https://www.jianshu.com/u/f6c54f846755>
 
 1.函数调用
