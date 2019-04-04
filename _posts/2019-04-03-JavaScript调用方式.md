@@ -178,3 +178,5 @@ var p10 = {
 
 p10.run(); // 88
 ```
+
+<script src="https://gist.github.com/mmistakes/43a355923921d22cd993.js"></script>
