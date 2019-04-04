@@ -5,6 +5,8 @@ tags: [JavaScript]
 comments: true
 ---
 
+函数调用 / 方法调用 / 构造函数 / 上下文调用
+
 [^1]: <https://www.jianshu.com/u/f6c54f846755>
 
 1.函数调用
