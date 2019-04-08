@@ -3,7 +3,6 @@ layout: post
 title: "Promise、async"
 tags: [JavaScript]
 comments: true
-
 ---
 
 Promise、async
