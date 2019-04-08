@@ -69,7 +69,7 @@ fn().then(res=> {
 
 ##### Promise 解决回调地狱
 
-```javascript 
+```javascript
 function f1() {
   return new Promise(function(resolve, reject) {
     // 把需要执行的异步操作放在这里
