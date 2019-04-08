@@ -9,7 +9,7 @@ JavaScript 库封装
 
 [^1]: https://www.jianshu.com/u/f6c54f846755
 
-##### 基本结构
+#### 基本结构
 
 ```javascript
 // jQuery
@@ -123,10 +123,10 @@ F.prototype = {
   constructor: F,
   css(name, value) {
     for(let i = 0; i < this.length; i++) {
-    let element = this[i];
-		// 设置样式
-		element.style[name] = value;
-  }
+      let element = this[i];
+      // 设置样式
+      element.style[name] = value;
+  	}
   }
 }
 
@@ -168,13 +168,14 @@ $("#header").css("color", "red")
   	var _init = jQuery.prototype.init;
   	return new _init(selector);
   	// 等价于
-    return new jQuery.prototype.init(selector);
+    return new jQuery.fn.init(selector);
   }
   
   global.$ = global.jQuery = jQuery;
 })(window)
 
-jQuery.prototype = {
+// 给jQuery添加了一个fn属性，fn属性等价于prototype
+jQuery.fn = jQuery.prototype = {
   constructor: jQuery,
   init: function(selector) {
     // 在jquery中 内部封装了一个Sizzle引擎（封装了无数正则表达式）
@@ -200,10 +201,10 @@ jQuery.prototype = {
   },
   css(name, value) {
     for(let i = 0; i < this.length; i++) {
-    let element = this[i];
-		// 设置样式
-		element.style[name] = value;
-  }
+    	let element = this[i];
+    	// 设置样式
+    	element.style[name] = value;
+  	}
   }
 }
 
@@ -211,7 +212,7 @@ jQuery.prototype = {
 // css方法在jQuery.prototype对象中
 // --> 为了让jQuery对象可以访问到css方法
 // 		--> 让init的原型继承自jQuery.prototype
-jQuery.prototype.init.prototype = jQuery.prototype
+jQuery.fn.init.prototype = jQuery.fn
 
 // ---> 1.创建了一个init的对象
 // ---> 2.执行css方法
@@ -223,4 +224,6 @@ $("div").css("color", "red")
 $(".header").css("color", "red")
 $("#header").css("color", "red")
 ```
+
+
 
