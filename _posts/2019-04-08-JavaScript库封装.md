@@ -35,7 +35,7 @@ JavaScript 库封装
 
 
 
-#####基本使用-内存浪费 — 不采用
+##### 基本使用-内存浪费 — 不采用
 
 ```javascript
 (function(global) {
@@ -161,7 +161,7 @@ $("#header").css("color", "red")
 
 ##### 优化
 
-```
+```javascript
 (function(global) {
 	// global 保存了 window 对象的引用
   function jQuery(selector) {
