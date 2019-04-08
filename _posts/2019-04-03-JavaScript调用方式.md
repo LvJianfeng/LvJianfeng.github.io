@@ -180,3 +180,45 @@ var p10 = {
 
 p10.run(); // 88
 ```
+
+
+
+补充Bind
+
+```
+// bind方法
+// 1.bind方法放在函数的原型中
+// ---> (function).__proto__ === (function构造函数).prototype
+// ---> 所有的函数对象的构造函数都是 Function
+//			---> Function 创建了 Function
+//			---> Function 创建了 Object
+//			---> Function 创建了 (function)
+
+Function.prototype._bind = function(target) {
+	// 这里的this其实就是(function) (fn)
+  // target表示新函数的内部的this值
+  
+  // 利用闭包穿件一个内部函数，返回那个所谓的新函数
+  // 箭头函数不能决定this的值，this的值有外层作用域普通函数决定的
+  return () => {
+    // 执行(function)的逻辑
+		this.call(target);  // === this.apply(target);
+  }
+  
+  // 等价于
+  
+  vat _that = this;
+  return function() {
+    _that.call(target);
+  }
+}
+function fn() {
+  console.log(this); // {age: 18}
+}
+
+var f1 = fn.bind({age: 18}) // 返回一个函数
+f1();
+```
+
+
+
