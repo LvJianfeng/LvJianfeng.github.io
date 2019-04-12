@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: Da Boom
+name: Dalton
 
 # Short bio or description (displayed in the header)
 description: Worker
@@ -50,11 +50,11 @@ footer-links:
   rss: # just type anything here for a working RSS icon
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   tumblr: # https://<username>.tumblr.com
-  twitter: jekyllrb
+  twitter: LvJianfeng
   youtube: # channel/<your_long_string> or user/<user-name>
 
 # Text under the icons in footer
-footer-text: © 2019 Malone
+footer-text: © 2019 Dalton
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
